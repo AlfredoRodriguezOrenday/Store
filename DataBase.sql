@@ -106,6 +106,7 @@ END
 Create Procedure SP_ShowProducts
 AS
 BEGIN
-	Select P.ProductName, P.Desription, P.Cant, P.Price, P.Abadible, DP.DeliveryName 
+	Select P.Id, P.ProductName, P.Desription, P.Cant, P.Price, P.Abadible, DP.DeliveryName 
 	From Products as P Inner Join DeliveryProducts as DP On DP.Id = P.IdDelivery;
 END 
+

@@ -8,6 +8,6 @@ namespace CRUDSTORE.Control
 {
     internal class ProductControl
     {
-
+        
     }
 }

@@ -21,7 +21,7 @@ namespace CRUDSTORE.Control
          * @Query This function require an Object with the Query that will be executed. 
          * */
 
-        public void ExecuteQueryWithOutData(SqlCommand Query)
+        public void ExecuteQueryWithOutReturnData(SqlCommand Query)
         {
 
             try

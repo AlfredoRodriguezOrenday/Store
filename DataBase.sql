@@ -17,6 +17,7 @@ Desription Varchar(200) Not null,
 Cant Float Not Null,
 Price Float Not null,
 Abadible Float,
+Photo Image,
 IdDelivery Int Foreign Key References DeliveryProducts(Id)
 )
 
@@ -40,11 +41,12 @@ Create Procedure SP_SaveProducts
 @Size Float,
 @Price Float,
 @Abadible Float,
+@Photo Image,
 @IdDelivery Int
 AS
 BEGIN 
-	Insert Into Products(ProductName, Desription, Cant, Price, Abadible, IdDelivery)
-	Values(@ProductName, @Desription, @Size, @Price, @Abadible, @IdDelivery)
+	Insert Into Products(ProductName, Desription, Cant, Price, Abadible, Photo, IdDelivery)
+	Values(@ProductName, @Desription, @Size, @Price, @Abadible, @Photo, @IdDelivery)
 END
 
 
@@ -61,7 +63,6 @@ BEGIN
 	Where Id = @ID;
 END
 
-
 Create Procedure SP_UpdateProducts
 @ID int,
 @ProductName Varchar(45),
@@ -69,11 +70,13 @@ Create Procedure SP_UpdateProducts
 @Size Float,
 @Price Float,
 @Abadible Float,
+@Photo Image,
 @IdDelivery Int
 AS
 BEGIN 
 	Update Products
-	Set ProductName = @ProductName, Desription = @Desription, Cant = @Size, Price = @Price, Abadible = @Abadible, IdDelivery = @IdDelivery
+	Set ProductName = @ProductName, Desription = @Desription, Cant = @Size, Price = @Price, Abadible = @Abadible,
+	Photo = @Photo, IdDelivery = @IdDelivery
 	Where Id = @ID; 
 END
 
@@ -106,7 +109,6 @@ END
 Create Procedure SP_ShowProducts
 AS
 BEGIN
-	Select P.Id, P.ProductName, P.Desription, P.Cant, P.Price, P.Abadible, DP.DeliveryName 
+	Select P.Id, P.ProductName, P.Desription, P.Cant, P.Price, P.Abadible, DP.DeliveryName, P.IdDelivery, P.Photo 
 	From Products as P Inner Join DeliveryProducts as DP On DP.Id = P.IdDelivery;
 END 
-

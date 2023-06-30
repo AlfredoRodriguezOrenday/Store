@@ -1,0 +1,11 @@
+C:\Users\alfredo\Documents\Curso de C#\CRUDSTORE\bin\Debug\CRUDSTORE.exe.config
+C:\Users\alfredo\Documents\Curso de C#\CRUDSTORE\bin\Debug\CRUDSTORE.exe
+C:\Users\alfredo\Documents\Curso de C#\CRUDSTORE\bin\Debug\CRUDSTORE.pdb
+C:\Users\alfredo\Documents\Curso de C#\CRUDSTORE\obj\Debug\CRUDSTORE.csproj.AssemblyReference.cache
+C:\Users\alfredo\Documents\Curso de C#\CRUDSTORE\obj\Debug\CRUDSTORE.csproj.SuggestedBindingRedirects.cache
+C:\Users\alfredo\Documents\Curso de C#\CRUDSTORE\obj\Debug\CRUDSTORE.Form1.resources
+C:\Users\alfredo\Documents\Curso de C#\CRUDSTORE\obj\Debug\CRUDSTORE.Properties.Resources.resources
+C:\Users\alfredo\Documents\Curso de C#\CRUDSTORE\obj\Debug\CRUDSTORE.csproj.GenerateResource.cache
+C:\Users\alfredo\Documents\Curso de C#\CRUDSTORE\obj\Debug\CRUDSTORE.csproj.CoreCompileInputs.cache
+C:\Users\alfredo\Documents\Curso de C#\CRUDSTORE\obj\Debug\CRUDSTORE.exe
+C:\Users\alfredo\Documents\Curso de C#\CRUDSTORE\obj\Debug\CRUDSTORE.pdb

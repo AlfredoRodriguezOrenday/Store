@@ -9,3 +9,5 @@ C:\Users\alfredo\Documents\Curso de C#\CRUDSTORE\obj\Debug\CRUDSTORE.csproj.Gene
 C:\Users\alfredo\Documents\Curso de C#\CRUDSTORE\obj\Debug\CRUDSTORE.csproj.CoreCompileInputs.cache
 C:\Users\alfredo\Documents\Curso de C#\CRUDSTORE\obj\Debug\CRUDSTORE.exe
 C:\Users\alfredo\Documents\Curso de C#\CRUDSTORE\obj\Debug\CRUDSTORE.pdb
+C:\Users\alfredo\Documents\Curso de C#\CRUDSTORE\obj\Debug\CRUDSTORE.View.DeliveryView.resources
+C:\Users\alfredo\Documents\Curso de C#\CRUDSTORE\obj\Debug\CRUDSTORE.View.ProductsView.resources

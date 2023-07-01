@@ -16,5 +16,13 @@ namespace CRUDSTORE.View
         {
             InitializeComponent();
         }
+
+
+        private void BtnHome_Click(object sender, EventArgs e)
+        {
+            Form1 Home = new Form1();
+            Home.Show();
+            this.Hide();
+        }
     }
 }

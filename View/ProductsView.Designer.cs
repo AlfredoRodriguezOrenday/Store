@@ -51,7 +51,9 @@
             this.CBDelivery = new System.Windows.Forms.ComboBox();
             this.PicFoto = new System.Windows.Forms.PictureBox();
             this.BtnExaminar = new System.Windows.Forms.Button();
+            this.DGVProducts = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.PicFoto)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DGVProducts)).BeginInit();
             this.SuspendLayout();
             // 
             // BtnHome
@@ -93,6 +95,7 @@
             this.BtnEliminar.Text = "Eliminate";
             this.BtnEliminar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.BtnEliminar.UseVisualStyleBackColor = true;
+            this.BtnEliminar.Click += new System.EventHandler(this.BtnEliminar_Click);
             // 
             // BtnEditar
             // 
@@ -105,6 +108,7 @@
             this.BtnEditar.Text = "Modify";
             this.BtnEditar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.BtnEditar.UseVisualStyleBackColor = true;
+            this.BtnEditar.Click += new System.EventHandler(this.BtnEditar_Click);
             // 
             // label5
             // 
@@ -134,6 +138,7 @@
             this.BtnAgregar.Text = "Add";
             this.BtnAgregar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.BtnAgregar.UseVisualStyleBackColor = true;
+            this.BtnAgregar.Click += new System.EventHandler(this.BtnAgregar_Click);
             // 
             // label4
             // 
@@ -270,11 +275,21 @@
             this.BtnExaminar.UseVisualStyleBackColor = true;
             this.BtnExaminar.Click += new System.EventHandler(this.BtnExaminar_Click);
             // 
+            // DGVProducts
+            // 
+            this.DGVProducts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DGVProducts.Location = new System.Drawing.Point(2, 216);
+            this.DGVProducts.Name = "DGVProducts";
+            this.DGVProducts.Size = new System.Drawing.Size(797, 235);
+            this.DGVProducts.TabIndex = 39;
+            this.DGVProducts.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.SelectProduct);
+            // 
             // ProductsView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.DGVProducts);
             this.Controls.Add(this.BtnExaminar);
             this.Controls.Add(this.PicFoto);
             this.Controls.Add(this.CBDelivery);
@@ -300,6 +315,7 @@
             this.Name = "ProductsView";
             this.Text = "ProductsView";
             ((System.ComponentModel.ISupportInitialize)(this.PicFoto)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DGVProducts)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -329,5 +345,6 @@
         private System.Windows.Forms.ComboBox CBDelivery;
         private System.Windows.Forms.PictureBox PicFoto;
         private System.Windows.Forms.Button BtnExaminar;
+        private System.Windows.Forms.DataGridView DGVProducts;
     }
 }

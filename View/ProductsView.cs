@@ -144,7 +144,9 @@ namespace CRUDSTORE.View
                 TxtPrice.Text = DGVProducts.Rows[Indice].Cells[4].Value.ToString();
                 TxtAvailable.Text = DGVProducts.Rows[Indice].Cells[5].Value.ToString();
                 CBDelivery.SelectedItem = DGVProducts.Rows[Indice].Cells[7].Value.ToString();
-                //PicFoto.Image = 
+                ImageByte = (byte[])DGVProducts.Rows[Indice].Cells[8].Value;
+                MemoryStream MS = new MemoryStream(ImageByte);
+                PicFoto.Image = Image.FromStream(MS);
             }
         }
     }

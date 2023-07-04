@@ -38,14 +38,14 @@
             this.TxtCompany = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.TxtPhoneNumber = new System.Windows.Forms.TextBox();
-            this.BtnAgregar = new System.Windows.Forms.Button();
+            this.BtnAdding = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.BtnEditar = new System.Windows.Forms.Button();
-            this.BtnEliminar = new System.Windows.Forms.Button();
-            this.BtnLimpiar = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.TxtDeliveryDays = new System.Windows.Forms.TextBox();
+            this.DGVDelivery = new System.Windows.Forms.DataGridView();
+            this.BtnModify = new System.Windows.Forms.Button();
+            this.BtnEliminate = new System.Windows.Forms.Button();
+            this.BtnClean = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.DGVDelivery)).BeginInit();
             this.SuspendLayout();
             // 
             // BtnHome
@@ -135,17 +135,18 @@
             this.TxtPhoneNumber.Size = new System.Drawing.Size(98, 20);
             this.TxtPhoneNumber.TabIndex = 7;
             // 
-            // BtnAgregar
+            // BtnAdding
             // 
-            this.BtnAgregar.Image = ((System.Drawing.Image)(resources.GetObject("BtnAgregar.Image")));
-            this.BtnAgregar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnAgregar.Location = new System.Drawing.Point(31, 84);
-            this.BtnAgregar.Name = "BtnAgregar";
-            this.BtnAgregar.Size = new System.Drawing.Size(75, 34);
-            this.BtnAgregar.TabIndex = 9;
-            this.BtnAgregar.Text = "Agregar";
-            this.BtnAgregar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.BtnAgregar.UseVisualStyleBackColor = true;
+            this.BtnAdding.Image = ((System.Drawing.Image)(resources.GetObject("BtnAdding.Image")));
+            this.BtnAdding.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnAdding.Location = new System.Drawing.Point(31, 84);
+            this.BtnAdding.Name = "BtnAdding";
+            this.BtnAdding.Size = new System.Drawing.Size(75, 34);
+            this.BtnAdding.TabIndex = 9;
+            this.BtnAdding.Text = "Adding";
+            this.BtnAdding.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.BtnAdding.UseVisualStyleBackColor = true;
+            this.BtnAdding.Click += new System.EventHandler(this.BtnAdding_Click);
             // 
             // label5
             // 
@@ -157,57 +158,61 @@
             this.label5.TabIndex = 11;
             this.label5.Text = "Delivery Days";
             // 
-            // textBox2
+            // TxtDeliveryDays
             // 
-            this.textBox2.Enabled = false;
-            this.textBox2.Location = new System.Drawing.Point(499, 41);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(98, 20);
-            this.textBox2.TabIndex = 10;
+            this.TxtDeliveryDays.Enabled = false;
+            this.TxtDeliveryDays.Location = new System.Drawing.Point(499, 41);
+            this.TxtDeliveryDays.Name = "TxtDeliveryDays";
+            this.TxtDeliveryDays.Size = new System.Drawing.Size(98, 20);
+            this.TxtDeliveryDays.TabIndex = 10;
             // 
-            // dataGridView1
+            // DGVDelivery
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(-1, 159);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(803, 291);
-            this.dataGridView1.TabIndex = 12;
+            this.DGVDelivery.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DGVDelivery.Location = new System.Drawing.Point(-1, 159);
+            this.DGVDelivery.Name = "DGVDelivery";
+            this.DGVDelivery.Size = new System.Drawing.Size(803, 291);
+            this.DGVDelivery.TabIndex = 12;
+            this.DGVDelivery.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.SelectDelivery);
             // 
-            // BtnEditar
+            // BtnModify
             // 
-            this.BtnEditar.Image = ((System.Drawing.Image)(resources.GetObject("BtnEditar.Image")));
-            this.BtnEditar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnEditar.Location = new System.Drawing.Point(130, 84);
-            this.BtnEditar.Name = "BtnEditar";
-            this.BtnEditar.Size = new System.Drawing.Size(75, 34);
-            this.BtnEditar.TabIndex = 13;
-            this.BtnEditar.Text = "Editar";
-            this.BtnEditar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.BtnEditar.UseVisualStyleBackColor = true;
+            this.BtnModify.Image = ((System.Drawing.Image)(resources.GetObject("BtnModify.Image")));
+            this.BtnModify.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnModify.Location = new System.Drawing.Point(130, 84);
+            this.BtnModify.Name = "BtnModify";
+            this.BtnModify.Size = new System.Drawing.Size(75, 34);
+            this.BtnModify.TabIndex = 13;
+            this.BtnModify.Text = "Modify";
+            this.BtnModify.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.BtnModify.UseVisualStyleBackColor = true;
+            this.BtnModify.Click += new System.EventHandler(this.BtnModify_Click);
             // 
-            // BtnEliminar
+            // BtnEliminate
             // 
-            this.BtnEliminar.Image = ((System.Drawing.Image)(resources.GetObject("BtnEliminar.Image")));
-            this.BtnEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnEliminar.Location = new System.Drawing.Point(230, 84);
-            this.BtnEliminar.Name = "BtnEliminar";
-            this.BtnEliminar.Size = new System.Drawing.Size(75, 34);
-            this.BtnEliminar.TabIndex = 14;
-            this.BtnEliminar.Text = "Eliminar";
-            this.BtnEliminar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.BtnEliminar.UseVisualStyleBackColor = true;
+            this.BtnEliminate.Image = ((System.Drawing.Image)(resources.GetObject("BtnEliminate.Image")));
+            this.BtnEliminate.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnEliminate.Location = new System.Drawing.Point(230, 84);
+            this.BtnEliminate.Name = "BtnEliminate";
+            this.BtnEliminate.Size = new System.Drawing.Size(75, 34);
+            this.BtnEliminate.TabIndex = 14;
+            this.BtnEliminate.Text = "Eliminate";
+            this.BtnEliminate.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.BtnEliminate.UseVisualStyleBackColor = true;
+            this.BtnEliminate.Click += new System.EventHandler(this.BtnEliminate_Click);
             // 
-            // BtnLimpiar
+            // BtnClean
             // 
-            this.BtnLimpiar.Image = ((System.Drawing.Image)(resources.GetObject("BtnLimpiar.Image")));
-            this.BtnLimpiar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnLimpiar.Location = new System.Drawing.Point(330, 84);
-            this.BtnLimpiar.Name = "BtnLimpiar";
-            this.BtnLimpiar.Size = new System.Drawing.Size(75, 34);
-            this.BtnLimpiar.TabIndex = 15;
-            this.BtnLimpiar.Text = "Limpiar";
-            this.BtnLimpiar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.BtnLimpiar.UseVisualStyleBackColor = true;
+            this.BtnClean.Image = ((System.Drawing.Image)(resources.GetObject("BtnClean.Image")));
+            this.BtnClean.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnClean.Location = new System.Drawing.Point(330, 84);
+            this.BtnClean.Name = "BtnClean";
+            this.BtnClean.Size = new System.Drawing.Size(75, 34);
+            this.BtnClean.TabIndex = 15;
+            this.BtnClean.Text = "Clean";
+            this.BtnClean.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.BtnClean.UseVisualStyleBackColor = true;
+            this.BtnClean.Click += new System.EventHandler(this.BtnClean_Click);
             // 
             // DeliveryView
             // 
@@ -215,13 +220,13 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.BtnLimpiar);
-            this.Controls.Add(this.BtnEliminar);
-            this.Controls.Add(this.BtnEditar);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.BtnClean);
+            this.Controls.Add(this.BtnEliminate);
+            this.Controls.Add(this.BtnModify);
+            this.Controls.Add(this.DGVDelivery);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.BtnAgregar);
+            this.Controls.Add(this.TxtDeliveryDays);
+            this.Controls.Add(this.BtnAdding);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.TxtPhoneNumber);
             this.Controls.Add(this.label3);
@@ -233,7 +238,7 @@
             this.Controls.Add(this.BtnHome);
             this.Name = "DeliveryView";
             this.Text = "DeliveryView";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DGVDelivery)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -250,12 +255,12 @@
         private System.Windows.Forms.TextBox TxtCompany;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox TxtPhoneNumber;
-        private System.Windows.Forms.Button BtnAgregar;
+        private System.Windows.Forms.Button BtnAdding;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button BtnEditar;
-        private System.Windows.Forms.Button BtnEliminar;
-        private System.Windows.Forms.Button BtnLimpiar;
+        private System.Windows.Forms.TextBox TxtDeliveryDays;
+        private System.Windows.Forms.DataGridView DGVDelivery;
+        private System.Windows.Forms.Button BtnModify;
+        private System.Windows.Forms.Button BtnEliminate;
+        private System.Windows.Forms.Button BtnClean;
     }
 }

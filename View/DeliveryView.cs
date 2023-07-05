@@ -86,19 +86,25 @@ namespace CRUDSTORE.View
 
         private void RefreshGrid()
         {
-            DGVDelivery.DataSource = DeliveryC.ShowDelivery("EXEC SP_ShowDeliveryProducts");
-            DGVDelivery.Columns[0].HeaderText = "Id";
-            DGVDelivery.Columns[1].HeaderText = "Name";
-            DGVDelivery.Columns[2].HeaderText = "Company";
-            DGVDelivery.Columns[3].HeaderText = "Phone Number";
-            DGVDelivery.Columns[4].HeaderText = "Delivery Days";
+            try
+            {
+                DGVDelivery.DataSource = DeliveryC.ShowDelivery("EXEC SP_ShowDeliveryProducts");
+                DGVDelivery.Columns[0].HeaderText = "Id";
+                DGVDelivery.Columns[1].HeaderText = "Name";
+                DGVDelivery.Columns[2].HeaderText = "Company";
+                DGVDelivery.Columns[3].HeaderText = "Phone Number";
+                //DGVDelivery.Columns[4].HeaderText = "Delivery Days";
+            }catch (Exception e)
+            {
+                MessageBox.Show("It was ocurred an error " + e.Message);
+            }
         }
 
         private void SelectDelivery(object sender, DataGridViewCellMouseEventArgs e)
         {
             int Indice =  e.RowIndex;
             DGVDelivery.ClearSelection();
-            if (Indice > 0)
+            if (Indice >= 0)
             {
                 TxtID.Text = DGVDelivery.Rows[Indice].Cells[0].Value.ToString();
                 TxtName.Text = DGVDelivery.Rows[Indice].Cells[1].Value.ToString();

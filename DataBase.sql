@@ -1,13 +1,13 @@
 Create Database StoreMini;
 
-USE StoreMini;
+Use StoreMini;
 
 Create Table DeliveryProducts(
 Id Int Primary Key Identity(1,1),
 DeliveryName Varchar(50) Not null,
 Company Varchar(100) Not null,
 PhoneNumber Int Unique,
-DeliveryDays Varchar(10) Not null
+DeliveryDays Varchar(100) Not null
 )
 
 Create Table Products(
@@ -34,6 +34,7 @@ BEGIN
 		Values (@DeliveryName, @Company, @PhoneNumber, @DeliveryDays);
 	END
 END
+
 
 Create Procedure SP_SaveProducts
 @ProductName Varchar(45),
@@ -112,3 +113,5 @@ BEGIN
 	Select P.Id, P.ProductName, P.Desription, P.Cant, P.Price, P.Abadible, DP.DeliveryName, P.IdDelivery, P.Photo 
 	From Products as P Inner Join DeliveryProducts as DP On DP.Id = P.IdDelivery;
 END 
+
+Exec SP_ShowDeliveryProducts

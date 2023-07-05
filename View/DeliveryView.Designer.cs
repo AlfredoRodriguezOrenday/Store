@@ -93,7 +93,6 @@
             // 
             // TxtName
             // 
-            this.TxtName.Enabled = false;
             this.TxtName.Location = new System.Drawing.Point(121, 41);
             this.TxtName.Name = "TxtName";
             this.TxtName.Size = new System.Drawing.Size(84, 20);
@@ -111,7 +110,6 @@
             // 
             // TxtCompany
             // 
-            this.TxtCompany.Enabled = false;
             this.TxtCompany.Location = new System.Drawing.Point(230, 41);
             this.TxtCompany.Name = "TxtCompany";
             this.TxtCompany.Size = new System.Drawing.Size(98, 20);
@@ -129,7 +127,6 @@
             // 
             // TxtPhoneNumber
             // 
-            this.TxtPhoneNumber.Enabled = false;
             this.TxtPhoneNumber.Location = new System.Drawing.Point(355, 41);
             this.TxtPhoneNumber.Name = "TxtPhoneNumber";
             this.TxtPhoneNumber.Size = new System.Drawing.Size(98, 20);
@@ -160,7 +157,6 @@
             // 
             // TxtDeliveryDays
             // 
-            this.TxtDeliveryDays.Enabled = false;
             this.TxtDeliveryDays.Location = new System.Drawing.Point(499, 41);
             this.TxtDeliveryDays.Name = "TxtDeliveryDays";
             this.TxtDeliveryDays.Size = new System.Drawing.Size(98, 20);

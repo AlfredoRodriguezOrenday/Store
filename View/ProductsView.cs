@@ -38,8 +38,10 @@ namespace CRUDSTORE.View
             TxtName.Text = "";
             TxtDescription.Text = "";
             TxtSize.Text = "";
+            TxtPrice.Text = "";
+            TxtAvailable.Text = "";
             PicFoto.Hide();
-            CBDelivery.SelectedIndex = 1; //Aqui hay un erros que hay que solucionar
+            CBDelivery.SelectedIndex = -1;
         }
 
         private void BtnLimpiar_Click(object sender, EventArgs e)
@@ -56,7 +58,7 @@ namespace CRUDSTORE.View
                 PicFoto.Image = Image.FromStream(SelectorImage.OpenFile());
                 MemoryStream memoria = new MemoryStream();
                 PicFoto.Image.Save(memoria, System.Drawing.Imaging.ImageFormat.Png);
-
+                PicFoto.SizeMode = PictureBoxSizeMode.StretchImage; 
                 ImageByte = memoria.ToArray();
             }
         }
@@ -67,6 +69,7 @@ namespace CRUDSTORE.View
             Id = 1;
             double Size = 0;
             double Price = 0;
+            double Available = 0;
             int IdDelivery = 0;
             int.TryParse(TxtID.Text, out Id);
             DeliveryModel.ID = Id;
@@ -76,6 +79,8 @@ namespace CRUDSTORE.View
             DeliveryModel.Size = Size;
             double.TryParse(TxtPrice.Text, out Price);
             DeliveryModel.Price = Price;
+            double.TryParse(TxtAvailable.Text, out Available);
+            DeliveryModel.Available = Available;
             DeliveryModel.Photo = ImageByte;
             int.TryParse(CBDelivery.SelectedValue.ToString(), out IdDelivery);
             DeliveryModel.IdDelivery = IdDelivery;
@@ -135,7 +140,7 @@ namespace CRUDSTORE.View
         {
             int Indice = e.RowIndex;
             DGVProducts.ClearSelection();
-            if(Indice > 0)
+            if(Indice >= 0)
             {
                 TxtID.Text = DGVProducts.Rows[Indice].Cells[0].Value.ToString();
                 TxtName.Text = DGVProducts.Rows[Indice].Cells[1].Value.ToString();
@@ -147,6 +152,7 @@ namespace CRUDSTORE.View
                 ImageByte = (byte[])DGVProducts.Rows[Indice].Cells[8].Value;
                 MemoryStream MS = new MemoryStream(ImageByte);
                 PicFoto.Image = Image.FromStream(MS);
+                PicFoto.SizeMode = PictureBoxSizeMode.StretchImage;
             }
         }
     }

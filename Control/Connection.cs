@@ -12,7 +12,7 @@ namespace CRUDSTORE.Control
     internal class Connection
     {
         SqlConnection ConnectionDB;
-        private string StringConnection = "server= LAPTOP-3989L6UR; database= dbExamenTI; integrated security = true";
+        private string StringConnection = "server= LAPTOP-3989L6UR; database= StoreMini; integrated security = true";
         public SqlConnection SetConnection()
         {
              return ConnectionDB = new SqlConnection(StringConnection);

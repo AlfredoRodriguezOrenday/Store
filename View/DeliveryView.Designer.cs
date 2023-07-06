@@ -134,15 +134,18 @@
             // 
             // BtnAdding
             // 
+            this.BtnAdding.BackColor = System.Drawing.SystemColors.ControlText;
+            this.BtnAdding.Font = new System.Drawing.Font("Montserrat", 9F, System.Drawing.FontStyle.Bold);
+            this.BtnAdding.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.BtnAdding.Image = ((System.Drawing.Image)(resources.GetObject("BtnAdding.Image")));
             this.BtnAdding.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnAdding.Location = new System.Drawing.Point(31, 84);
             this.BtnAdding.Name = "BtnAdding";
-            this.BtnAdding.Size = new System.Drawing.Size(75, 34);
+            this.BtnAdding.Size = new System.Drawing.Size(86, 34);
             this.BtnAdding.TabIndex = 9;
             this.BtnAdding.Text = "Adding";
             this.BtnAdding.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.BtnAdding.UseVisualStyleBackColor = true;
+            this.BtnAdding.UseVisualStyleBackColor = false;
             this.BtnAdding.Click += new System.EventHandler(this.BtnAdding_Click);
             // 
             // label5
@@ -173,11 +176,12 @@
             // 
             // BtnModify
             // 
+            this.BtnModify.Font = new System.Drawing.Font("Montserrat", 9F, System.Drawing.FontStyle.Bold);
             this.BtnModify.Image = ((System.Drawing.Image)(resources.GetObject("BtnModify.Image")));
             this.BtnModify.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnModify.Location = new System.Drawing.Point(130, 84);
+            this.BtnModify.Location = new System.Drawing.Point(148, 84);
             this.BtnModify.Name = "BtnModify";
-            this.BtnModify.Size = new System.Drawing.Size(75, 34);
+            this.BtnModify.Size = new System.Drawing.Size(87, 34);
             this.BtnModify.TabIndex = 13;
             this.BtnModify.Text = "Modify";
             this.BtnModify.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -186,11 +190,12 @@
             // 
             // BtnEliminate
             // 
+            this.BtnEliminate.Font = new System.Drawing.Font("Montserrat", 9F, System.Drawing.FontStyle.Bold);
             this.BtnEliminate.Image = ((System.Drawing.Image)(resources.GetObject("BtnEliminate.Image")));
             this.BtnEliminate.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnEliminate.Location = new System.Drawing.Point(230, 84);
+            this.BtnEliminate.Location = new System.Drawing.Point(264, 84);
             this.BtnEliminate.Name = "BtnEliminate";
-            this.BtnEliminate.Size = new System.Drawing.Size(75, 34);
+            this.BtnEliminate.Size = new System.Drawing.Size(101, 34);
             this.BtnEliminate.TabIndex = 14;
             this.BtnEliminate.Text = "Eliminate";
             this.BtnEliminate.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -199,9 +204,10 @@
             // 
             // BtnClean
             // 
+            this.BtnClean.Font = new System.Drawing.Font("Montserrat", 9F, System.Drawing.FontStyle.Bold);
             this.BtnClean.Image = ((System.Drawing.Image)(resources.GetObject("BtnClean.Image")));
             this.BtnClean.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnClean.Location = new System.Drawing.Point(330, 84);
+            this.BtnClean.Location = new System.Drawing.Point(398, 84);
             this.BtnClean.Name = "BtnClean";
             this.BtnClean.Size = new System.Drawing.Size(75, 34);
             this.BtnClean.TabIndex = 15;

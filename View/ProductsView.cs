@@ -63,7 +63,7 @@ namespace CRUDSTORE.View
             }
         }
 
-        private Product GetInfo()
+        private Product GetInfo(bool Action)
         {
             Product DeliveryModel = new Product();
             Id = 1;
@@ -72,24 +72,35 @@ namespace CRUDSTORE.View
             double Available = 0;
             int IdDelivery = 0;
             int.TryParse(TxtID.Text, out Id);
-            DeliveryModel.ID = Id;
-            DeliveryModel.Name = TxtName.Text;
-            DeliveryModel.Description = TxtDescription.Text;
             double.TryParse(TxtSize.Text, out Size);
-            DeliveryModel.Size = Size;
             double.TryParse(TxtPrice.Text, out Price);
-            DeliveryModel.Price = Price;
             double.TryParse(TxtAvailable.Text, out Available);
-            DeliveryModel.Available = Available;
-            DeliveryModel.Photo = ImageByte;
             int.TryParse(CBDelivery.SelectedValue.ToString(), out IdDelivery);
-            DeliveryModel.IdDelivery = IdDelivery;
+
+            if (Action && Id == 0) {
+                MessageBox.Show("Select one row");
+            }
+            if (TxtName.Text != "" && TxtDescription.Text != "" && TxtSize.Text != "" && TxtPrice.Text != "" && TxtAvailable.Text != "" && IdDelivery != 0)
+            {
+                DeliveryModel.Name = TxtName.Text;
+                DeliveryModel.Description = TxtDescription.Text;
+                DeliveryModel.Size = Size;
+                DeliveryModel.Price = Price;
+                DeliveryModel.Available = Available;
+                DeliveryModel.Photo = ImageByte;
+                DeliveryModel.IdDelivery = IdDelivery;
+            }
+            else
+            {
+                MessageBox.Show("Complete the fields");
+            }
+            DeliveryModel.ID = Id;
             return DeliveryModel;
         }
 
         private void BtnAgregar_Click(object sender, EventArgs e)
         {
-            ProductC.SaveProduct(GetInfo());
+            ProductC.SaveProduct(GetInfo(false));
             RefreshGrid();
             CleanText();
 
@@ -124,14 +135,14 @@ namespace CRUDSTORE.View
 
         private void BtnEditar_Click(object sender, EventArgs e)
         {
-            ProductC.UpdateProduct(GetInfo());
+            ProductC.UpdateProduct(GetInfo(true));
             RefreshGrid();
             CleanText();
         }
 
         private void BtnEliminar_Click(object sender, EventArgs e)
         {
-            ProductC.DeleteProduct(GetInfo());
+            ProductC.DeleteProduct(GetInfo(true));
             RefreshGrid();
             CleanText();
         }

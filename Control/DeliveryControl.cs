@@ -41,7 +41,7 @@ namespace CRUDSTORE.Control
 
         public void DeleteDeliveryProduct(DeliveryProduct DP)
         {
-            Query = new SqlCommand("Exec SP_DeleteDeliveryProducts @Id");
+            Query = new SqlCommand("Exec SP_DeleteDeliveryProducts @ID");
             Query.Parameters.Add("@ID", SqlDbType.Int).Value = DP.ID;
             ConnectionDB.ExecuteQueryWithOutReturnData(Query);
         }

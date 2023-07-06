@@ -33,16 +33,18 @@ namespace CRUDSTORE.View
 
         private void BtnAdding_Click(object sender, EventArgs e)
         {
-            DeliveryC.AddDeliveryProduct(GetData());
+            DeliveryC.AddDeliveryProduct(GetData(false));
             CleanTxt();
+            RefreshGrid();
         }
 
         private void BtnModify_Click(object sender, EventArgs e)
         {
             if(TxtID.Text != null)
             {
-                DeliveryC.UpdateDeliveryProduct(GetData());
+                DeliveryC.UpdateDeliveryProduct(GetData(true));
                 CleanTxt();
+                RefreshGrid();
             }
         }
 
@@ -50,8 +52,9 @@ namespace CRUDSTORE.View
         {
             if(TxtID.Text != null)
             {
-                DeliveryC.DeleteDeliveryProduct(GetData());
+                DeliveryC.DeleteDeliveryProduct(GetData(true));
                 CleanTxt();
+                RefreshGrid();
             }
         }
 
@@ -67,20 +70,31 @@ namespace CRUDSTORE.View
             TxtCompany.Text = "";
             TxtPhoneNumber.Text = "";
             TxtDeliveryDays.Text = "";
+            Id = 0;
         }
 
-        private DeliveryProduct GetData()
+        private DeliveryProduct GetData(bool Action)
         {
             DeliveryProduct DeliveryModel = new DeliveryProduct();
             int.TryParse(TxtID.Text, out Id);
-            int PhoneNumber = 0;
-            int.TryParse(TxtPhoneNumber.Text, out PhoneNumber);
-
+            int PhoneNumbers = 0;
+            int.TryParse(TxtPhoneNumber.Text, out PhoneNumbers);
+            if (Action && Id == 0)
+            {
+                MessageBox.Show("Select one row");
+            }
+            if (TxtName.Text != "" && TxtCompany.Text != "" && PhoneNumbers != 0 && TxtDeliveryDays.Text != "")
+            {
+                DeliveryModel.Name = TxtName.Text;
+                DeliveryModel.Company = TxtCompany.Text;
+                DeliveryModel.PhoneNumber = PhoneNumbers;
+                DeliveryModel.DeliveryDays = TxtDeliveryDays.Text;
+            }
+            else
+            {
+                MessageBox.Show("Complete the fields");
+            }
             DeliveryModel.ID = Id;
-            DeliveryModel.Name = TxtName.Text;
-            DeliveryModel.Company = TxtCompany.Text;
-            DeliveryModel.PhoneNumber = PhoneNumber;
-            DeliveryModel.DeliveryDays = TxtDeliveryDays.Text;
             return DeliveryModel;
         }
 
@@ -88,12 +102,12 @@ namespace CRUDSTORE.View
         {
             try
             {
-                DGVDelivery.DataSource = DeliveryC.ShowDelivery("EXEC SP_ShowDeliveryProducts");
+                DGVDelivery.DataSource = DeliveryC.ShowDelivery("Exec SP_ShowDeliveryProducts").Tables[0];
                 DGVDelivery.Columns[0].HeaderText = "Id";
                 DGVDelivery.Columns[1].HeaderText = "Name";
                 DGVDelivery.Columns[2].HeaderText = "Company";
                 DGVDelivery.Columns[3].HeaderText = "Phone Number";
-                //DGVDelivery.Columns[4].HeaderText = "Delivery Days";
+                DGVDelivery.Columns[4].HeaderText = "Delivery Days";
             }catch (Exception e)
             {
                 MessageBox.Show("It was ocurred an error " + e.Message);

@@ -79,23 +79,29 @@ namespace CRUDSTORE.View
             int.TryParse(TxtID.Text, out Id);
             int PhoneNumbers = 0;
             int.TryParse(TxtPhoneNumber.Text, out PhoneNumbers);
-            if (Action && Id == 0)
+            try
             {
-                MessageBox.Show("Select one row");
-            }
-            if (TxtName.Text != "" && TxtCompany.Text != "" && PhoneNumbers != 0 && TxtDeliveryDays.Text != "")
+                if (Action && Id == 0)
+                {
+                    throw new Exception("Select one row");
+                }
+                if (TxtName.Text != "" && TxtCompany.Text != "" && PhoneNumbers != 0 && TxtDeliveryDays.Text != "")
+                {
+                    DeliveryModel.Name = TxtName.Text;
+                    DeliveryModel.Company = TxtCompany.Text;
+                    DeliveryModel.PhoneNumber = PhoneNumbers;
+                    DeliveryModel.DeliveryDays = TxtDeliveryDays.Text;
+                }
+                else
+                {
+                    throw new Exception("Complete the fields");
+                }
+            }catch(Exception ex)
             {
-                DeliveryModel.Name = TxtName.Text;
-                DeliveryModel.Company = TxtCompany.Text;
-                DeliveryModel.PhoneNumber = PhoneNumbers;
-                DeliveryModel.DeliveryDays = TxtDeliveryDays.Text;
+                MessageBox.Show(ex.Message);
             }
-            else
-            {
-                MessageBox.Show("Complete the fields");
-            }
-            DeliveryModel.ID = Id;
-            return DeliveryModel;
+                    DeliveryModel.ID = Id;
+                    return DeliveryModel;
         }
 
         private void RefreshGrid()

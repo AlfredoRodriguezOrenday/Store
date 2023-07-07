@@ -41,6 +41,7 @@ namespace CRUDSTORE.View
             TxtPrice.Text = "";
             TxtAvailable.Text = "";
             PicFoto.Hide();
+            ImageByte.Initialize(); // Maybe in the future I will change this line
             CBDelivery.SelectedIndex = -1;
         }
 
@@ -76,23 +77,29 @@ namespace CRUDSTORE.View
             double.TryParse(TxtPrice.Text, out Price);
             double.TryParse(TxtAvailable.Text, out Available);
             int.TryParse(CBDelivery.SelectedValue.ToString(), out IdDelivery);
-
-            if (Action && Id == 0) {
-                MessageBox.Show("Select one row");
-            }
-            if (TxtName.Text != "" && TxtDescription.Text != "" && TxtSize.Text != "" && TxtPrice.Text != "" && TxtAvailable.Text != "" && IdDelivery != 0)
+            try
             {
-                DeliveryModel.Name = TxtName.Text;
-                DeliveryModel.Description = TxtDescription.Text;
-                DeliveryModel.Size = Size;
-                DeliveryModel.Price = Price;
-                DeliveryModel.Available = Available;
-                DeliveryModel.Photo = ImageByte;
-                DeliveryModel.IdDelivery = IdDelivery;
-            }
-            else
+                if (Action && Id == 0)
+                {
+                    throw new Exception("Select one row");
+                }
+                if (TxtName.Text != "" && TxtDescription.Text != "" && TxtSize.Text != "" && TxtPrice.Text != "" && TxtAvailable.Text != "" && IdDelivery != 0)
+                {
+                    DeliveryModel.Name = TxtName.Text;
+                    DeliveryModel.Description = TxtDescription.Text;
+                    DeliveryModel.Size = Size;
+                    DeliveryModel.Price = Price;
+                    DeliveryModel.Available = Available;
+                    DeliveryModel.Photo = ImageByte;
+                    DeliveryModel.IdDelivery = IdDelivery;
+                }
+                else
+                {
+                    throw new Exception("Complete the fields");
+                }
+            }catch(Exception ex)
             {
-                MessageBox.Show("Complete the fields");
+                MessageBox.Show(ex.Message);
             }
             DeliveryModel.ID = Id;
             return DeliveryModel;

@@ -129,9 +129,10 @@ namespace CRUDSTORE.View
                 DGVProducts.Columns[7].HeaderText = "Id Delivery";
                 DGVProducts.Columns[8].HeaderText = "Photo";
                 DataGridViewColumn column = DGVProducts.Columns[8];
-                //column.Width = 150;
-                //DGVProducts.RowTemplate.Height = 200;
-                //DGVProducts.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+                column.Width = 250;
+                DGVProducts.RowTemplate.Height = 120;
+                //column.ImageLayout = DataGridViewImageCellLayout.Stretch;
+                DGVProducts.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             }
             catch(Exception e)
             {

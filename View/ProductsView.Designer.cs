@@ -277,8 +277,9 @@
             // 
             // DGVProducts
             // 
+            this.DGVProducts.AllowUserToAddRows = false;
             this.DGVProducts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DGVProducts.Location = new System.Drawing.Point(2, 216);
+            this.DGVProducts.Location = new System.Drawing.Point(-5, 201);
             this.DGVProducts.Name = "DGVProducts";
             this.DGVProducts.Size = new System.Drawing.Size(797, 235);
             this.DGVProducts.TabIndex = 39;

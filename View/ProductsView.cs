@@ -40,9 +40,10 @@ namespace CRUDSTORE.View
             TxtSize.Text = "";
             TxtPrice.Text = "";
             TxtAvailable.Text = "";
-            PicFoto.Hide();
+            PicFoto.Image = null;
             ImageByte.Initialize(); // Maybe in the future I will change this line
-            CBDelivery.SelectedIndex = -1;
+            CBDelivery.SelectedIndex = 0;
+            Id = 0;
         }
 
         private void BtnLimpiar_Click(object sender, EventArgs e)
@@ -83,7 +84,7 @@ namespace CRUDSTORE.View
                 {
                     throw new Exception("Select one row");
                 }
-                if (TxtName.Text != "" && TxtDescription.Text != "" && TxtSize.Text != "" && TxtPrice.Text != "" && TxtAvailable.Text != "" && IdDelivery != 0)
+                if (TxtName.Text != "" && TxtDescription.Text != "" && TxtSize.Text != "" && TxtPrice.Text != "" && TxtAvailable.Text != "" && PicFoto.Image != null && CBDelivery.SelectedIndex >= 0 && IdDelivery >= 0 )
                 {
                     DeliveryModel.Name = TxtName.Text;
                     DeliveryModel.Description = TxtDescription.Text;
@@ -127,7 +128,12 @@ namespace CRUDSTORE.View
                 DGVProducts.Columns[6].HeaderText = "Delivery Name";
                 DGVProducts.Columns[7].HeaderText = "Id Delivery";
                 DGVProducts.Columns[8].HeaderText = "Photo";
-            }catch(Exception e)
+                DataGridViewColumn column = DGVProducts.Columns[8];
+                //column.Width = 150;
+                //DGVProducts.RowTemplate.Height = 200;
+                //DGVProducts.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            }
+            catch(Exception e)
             {
                 MessageBox.Show("It was ocurred an error " + e.Message);
             }
@@ -166,7 +172,7 @@ namespace CRUDSTORE.View
                 TxtSize.Text = DGVProducts.Rows[Indice].Cells[3].Value.ToString();
                 TxtPrice.Text = DGVProducts.Rows[Indice].Cells[4].Value.ToString();
                 TxtAvailable.Text = DGVProducts.Rows[Indice].Cells[5].Value.ToString();
-                CBDelivery.SelectedItem = DGVProducts.Rows[Indice].Cells[7].Value.ToString();
+                CBDelivery.SelectedValue = DGVProducts.Rows[Indice].Cells[7].Value.ToString();
                 ImageByte = (byte[])DGVProducts.Rows[Indice].Cells[8].Value;
                 MemoryStream MS = new MemoryStream(ImageByte);
                 PicFoto.Image = Image.FromStream(MS);

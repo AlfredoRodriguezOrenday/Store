@@ -131,7 +131,6 @@ namespace CRUDSTORE.View
                 DataGridViewColumn column = DGVProducts.Columns[8];
                 column.Width = 250;
                 DGVProducts.RowTemplate.Height = 120;
-                //column.ImageLayout = DataGridViewImageCellLayout.Stretch;
                 DGVProducts.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             }
             catch(Exception e)

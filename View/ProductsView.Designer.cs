@@ -58,11 +58,11 @@
             // 
             // BtnHome
             // 
-            this.BtnHome.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.BtnHome.BackColor = System.Drawing.SystemColors.WindowFrame;
             this.BtnHome.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold);
             this.BtnHome.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.BtnHome.Image = ((System.Drawing.Image)(resources.GetObject("BtnHome.Image")));
-            this.BtnHome.Location = new System.Drawing.Point(724, -1);
+            this.BtnHome.Location = new System.Drawing.Point(821, 3);
             this.BtnHome.Name = "BtnHome";
             this.BtnHome.Size = new System.Drawing.Size(75, 65);
             this.BtnHome.TabIndex = 1;
@@ -73,47 +73,57 @@
             // 
             // BtnLimpiar
             // 
+            this.BtnLimpiar.BackColor = System.Drawing.SystemColors.ControlText;
+            this.BtnLimpiar.Font = new System.Drawing.Font("Montserrat", 9F, System.Drawing.FontStyle.Bold);
+            this.BtnLimpiar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.BtnLimpiar.Image = ((System.Drawing.Image)(resources.GetObject("BtnLimpiar.Image")));
             this.BtnLimpiar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnLimpiar.Location = new System.Drawing.Point(703, 98);
+            this.BtnLimpiar.Location = new System.Drawing.Point(786, 139);
             this.BtnLimpiar.Name = "BtnLimpiar";
             this.BtnLimpiar.Size = new System.Drawing.Size(75, 34);
             this.BtnLimpiar.TabIndex = 29;
             this.BtnLimpiar.Text = "Clean";
             this.BtnLimpiar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.BtnLimpiar.UseVisualStyleBackColor = true;
+            this.BtnLimpiar.UseVisualStyleBackColor = false;
             this.BtnLimpiar.Click += new System.EventHandler(this.BtnLimpiar_Click);
             // 
             // BtnEliminar
             // 
+            this.BtnEliminar.BackColor = System.Drawing.SystemColors.ControlText;
+            this.BtnEliminar.Font = new System.Drawing.Font("Montserrat", 9F, System.Drawing.FontStyle.Bold);
+            this.BtnEliminar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.BtnEliminar.Image = ((System.Drawing.Image)(resources.GetObject("BtnEliminar.Image")));
             this.BtnEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnEliminar.Location = new System.Drawing.Point(603, 98);
+            this.BtnEliminar.Location = new System.Drawing.Point(653, 139);
             this.BtnEliminar.Name = "BtnEliminar";
-            this.BtnEliminar.Size = new System.Drawing.Size(80, 34);
+            this.BtnEliminar.Size = new System.Drawing.Size(102, 34);
             this.BtnEliminar.TabIndex = 28;
             this.BtnEliminar.Text = "Eliminate";
             this.BtnEliminar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.BtnEliminar.UseVisualStyleBackColor = true;
+            this.BtnEliminar.UseVisualStyleBackColor = false;
             this.BtnEliminar.Click += new System.EventHandler(this.BtnEliminar_Click);
             // 
             // BtnEditar
             // 
+            this.BtnEditar.BackColor = System.Drawing.SystemColors.ControlText;
+            this.BtnEditar.Font = new System.Drawing.Font("Montserrat", 9F, System.Drawing.FontStyle.Bold);
+            this.BtnEditar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.BtnEditar.Image = ((System.Drawing.Image)(resources.GetObject("BtnEditar.Image")));
             this.BtnEditar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnEditar.Location = new System.Drawing.Point(503, 98);
+            this.BtnEditar.Location = new System.Drawing.Point(542, 139);
             this.BtnEditar.Name = "BtnEditar";
-            this.BtnEditar.Size = new System.Drawing.Size(75, 34);
+            this.BtnEditar.Size = new System.Drawing.Size(82, 34);
             this.BtnEditar.TabIndex = 27;
             this.BtnEditar.Text = "Modify";
             this.BtnEditar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.BtnEditar.UseVisualStyleBackColor = true;
+            this.BtnEditar.UseVisualStyleBackColor = false;
             this.BtnEditar.Click += new System.EventHandler(this.BtnEditar_Click);
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold);
+            this.label5.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label5.Location = new System.Drawing.Point(346, 23);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(53, 22);
@@ -122,6 +132,8 @@
             // 
             // TxtPrice
             // 
+            this.TxtPrice.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.TxtPrice.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.TxtPrice.Location = new System.Drawing.Point(350, 48);
             this.TxtPrice.Name = "TxtPrice";
             this.TxtPrice.Size = new System.Drawing.Size(98, 20);
@@ -129,21 +141,25 @@
             // 
             // BtnAgregar
             // 
+            this.BtnAgregar.BackColor = System.Drawing.SystemColors.ControlText;
+            this.BtnAgregar.Font = new System.Drawing.Font("Montserrat", 9F, System.Drawing.FontStyle.Bold);
+            this.BtnAgregar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.BtnAgregar.Image = ((System.Drawing.Image)(resources.GetObject("BtnAgregar.Image")));
             this.BtnAgregar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnAgregar.Location = new System.Drawing.Point(404, 98);
+            this.BtnAgregar.Location = new System.Drawing.Point(443, 139);
             this.BtnAgregar.Name = "BtnAgregar";
             this.BtnAgregar.Size = new System.Drawing.Size(75, 34);
             this.BtnAgregar.TabIndex = 24;
             this.BtnAgregar.Text = "Add";
             this.BtnAgregar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.BtnAgregar.UseVisualStyleBackColor = true;
+            this.BtnAgregar.UseVisualStyleBackColor = false;
             this.BtnAgregar.Click += new System.EventHandler(this.BtnAgregar_Click);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold);
+            this.label4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label4.Location = new System.Drawing.Point(219, 23);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(44, 22);
@@ -152,6 +168,8 @@
             // 
             // TxtSize
             // 
+            this.TxtSize.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.TxtSize.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.TxtSize.Location = new System.Drawing.Point(223, 48);
             this.TxtSize.Name = "TxtSize";
             this.TxtSize.Size = new System.Drawing.Size(98, 20);
@@ -161,6 +179,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold);
+            this.label3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label3.Location = new System.Drawing.Point(611, 23);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(107, 22);
@@ -169,15 +188,19 @@
             // 
             // TxtDescription
             // 
+            this.TxtDescription.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.TxtDescription.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.TxtDescription.Location = new System.Drawing.Point(611, 48);
+            this.TxtDescription.Multiline = true;
             this.TxtDescription.Name = "TxtDescription";
-            this.TxtDescription.Size = new System.Drawing.Size(102, 20);
+            this.TxtDescription.Size = new System.Drawing.Size(186, 62);
             this.TxtDescription.TabIndex = 20;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold);
+            this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label2.Location = new System.Drawing.Point(104, 23);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(60, 22);
@@ -186,6 +209,8 @@
             // 
             // TxtName
             // 
+            this.TxtName.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.TxtName.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.TxtName.Location = new System.Drawing.Point(108, 48);
             this.TxtName.Name = "TxtName";
             this.TxtName.Size = new System.Drawing.Size(84, 20);
@@ -195,6 +220,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold);
+            this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label1.Location = new System.Drawing.Point(14, 23);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(28, 22);
@@ -203,7 +229,9 @@
             // 
             // TxtID
             // 
+            this.TxtID.BackColor = System.Drawing.SystemColors.WindowFrame;
             this.TxtID.Enabled = false;
+            this.TxtID.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.TxtID.Location = new System.Drawing.Point(18, 48);
             this.TxtID.Name = "TxtID";
             this.TxtID.Size = new System.Drawing.Size(65, 20);
@@ -213,6 +241,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold);
+            this.label6.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label6.Location = new System.Drawing.Point(478, 23);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(88, 22);
@@ -221,6 +250,8 @@
             // 
             // TxtAvailable
             // 
+            this.TxtAvailable.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.TxtAvailable.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.TxtAvailable.Location = new System.Drawing.Point(482, 48);
             this.TxtAvailable.Name = "TxtAvailable";
             this.TxtAvailable.Size = new System.Drawing.Size(98, 20);
@@ -230,6 +261,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold);
+            this.label7.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label7.Location = new System.Drawing.Point(14, 88);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(60, 22);
@@ -240,6 +272,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold);
+            this.label8.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label8.Location = new System.Drawing.Point(145, 88);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(80, 22);
@@ -248,6 +281,8 @@
             // 
             // CBDelivery
             // 
+            this.CBDelivery.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.CBDelivery.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.CBDelivery.FormattingEnabled = true;
             this.CBDelivery.Location = new System.Drawing.Point(149, 111);
             this.CBDelivery.Name = "CBDelivery";
@@ -264,24 +299,27 @@
             // 
             // BtnExaminar
             // 
+            this.BtnExaminar.BackColor = System.Drawing.SystemColors.ControlText;
+            this.BtnExaminar.Font = new System.Drawing.Font("Montserrat", 9F, System.Drawing.FontStyle.Bold);
+            this.BtnExaminar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.BtnExaminar.Image = ((System.Drawing.Image)(resources.GetObject("BtnExaminar.Image")));
             this.BtnExaminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnExaminar.Location = new System.Drawing.Point(293, 98);
+            this.BtnExaminar.Location = new System.Drawing.Point(311, 139);
             this.BtnExaminar.Name = "BtnExaminar";
-            this.BtnExaminar.Size = new System.Drawing.Size(87, 34);
+            this.BtnExaminar.Size = new System.Drawing.Size(106, 34);
             this.BtnExaminar.TabIndex = 38;
             this.BtnExaminar.Text = "Examinate";
             this.BtnExaminar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.BtnExaminar.UseVisualStyleBackColor = true;
+            this.BtnExaminar.UseVisualStyleBackColor = false;
             this.BtnExaminar.Click += new System.EventHandler(this.BtnExaminar_Click);
             // 
             // DGVProducts
             // 
             this.DGVProducts.AllowUserToAddRows = false;
             this.DGVProducts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DGVProducts.Location = new System.Drawing.Point(-5, 201);
+            this.DGVProducts.Location = new System.Drawing.Point(2, 201);
             this.DGVProducts.Name = "DGVProducts";
-            this.DGVProducts.Size = new System.Drawing.Size(797, 235);
+            this.DGVProducts.Size = new System.Drawing.Size(894, 248);
             this.DGVProducts.TabIndex = 39;
             this.DGVProducts.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.SelectProduct);
             // 
@@ -289,7 +327,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.BackColor = System.Drawing.SystemColors.ControlText;
+            this.ClientSize = new System.Drawing.Size(899, 450);
             this.Controls.Add(this.DGVProducts);
             this.Controls.Add(this.BtnExaminar);
             this.Controls.Add(this.PicFoto);
@@ -313,6 +352,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.TxtID);
             this.Controls.Add(this.BtnHome);
+            this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.Name = "ProductsView";
             this.Text = "ProductsView";
             ((System.ComponentModel.ISupportInitialize)(this.PicFoto)).EndInit();

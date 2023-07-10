@@ -50,7 +50,7 @@
             // 
             // BtnHome
             // 
-            this.BtnHome.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.BtnHome.BackColor = System.Drawing.SystemColors.WindowFrame;
             this.BtnHome.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold);
             this.BtnHome.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.BtnHome.Image = ((System.Drawing.Image)(resources.GetObject("BtnHome.Image")));
@@ -65,6 +65,7 @@
             // 
             // TxtID
             // 
+            this.TxtID.BackColor = System.Drawing.SystemColors.WindowFrame;
             this.TxtID.Enabled = false;
             this.TxtID.Location = new System.Drawing.Point(31, 41);
             this.TxtID.Name = "TxtID";
@@ -75,6 +76,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold);
+            this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label1.Location = new System.Drawing.Point(27, 16);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(28, 22);
@@ -85,6 +87,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold);
+            this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label2.Location = new System.Drawing.Point(117, 16);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(60, 22);
@@ -93,6 +96,7 @@
             // 
             // TxtName
             // 
+            this.TxtName.BackColor = System.Drawing.SystemColors.WindowFrame;
             this.TxtName.Location = new System.Drawing.Point(121, 41);
             this.TxtName.Name = "TxtName";
             this.TxtName.Size = new System.Drawing.Size(84, 20);
@@ -102,6 +106,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold);
+            this.label3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label3.Location = new System.Drawing.Point(226, 16);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(91, 22);
@@ -110,6 +115,7 @@
             // 
             // TxtCompany
             // 
+            this.TxtCompany.BackColor = System.Drawing.SystemColors.WindowFrame;
             this.TxtCompany.Location = new System.Drawing.Point(230, 41);
             this.TxtCompany.Name = "TxtCompany";
             this.TxtCompany.Size = new System.Drawing.Size(98, 20);
@@ -119,6 +125,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold);
+            this.label4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label4.Location = new System.Drawing.Point(335, 16);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(138, 22);
@@ -127,6 +134,7 @@
             // 
             // TxtPhoneNumber
             // 
+            this.TxtPhoneNumber.BackColor = System.Drawing.SystemColors.WindowFrame;
             this.TxtPhoneNumber.Location = new System.Drawing.Point(355, 41);
             this.TxtPhoneNumber.Name = "TxtPhoneNumber";
             this.TxtPhoneNumber.Size = new System.Drawing.Size(98, 20);
@@ -152,6 +160,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold);
+            this.label5.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label5.Location = new System.Drawing.Point(479, 16);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(127, 22);
@@ -160,6 +169,7 @@
             // 
             // TxtDeliveryDays
             // 
+            this.TxtDeliveryDays.BackColor = System.Drawing.SystemColors.WindowFrame;
             this.TxtDeliveryDays.Location = new System.Drawing.Point(499, 41);
             this.TxtDeliveryDays.Name = "TxtDeliveryDays";
             this.TxtDeliveryDays.Size = new System.Drawing.Size(98, 20);
@@ -176,7 +186,9 @@
             // 
             // BtnModify
             // 
+            this.BtnModify.BackColor = System.Drawing.SystemColors.ControlText;
             this.BtnModify.Font = new System.Drawing.Font("Montserrat", 9F, System.Drawing.FontStyle.Bold);
+            this.BtnModify.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.BtnModify.Image = ((System.Drawing.Image)(resources.GetObject("BtnModify.Image")));
             this.BtnModify.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnModify.Location = new System.Drawing.Point(148, 84);
@@ -185,12 +197,14 @@
             this.BtnModify.TabIndex = 13;
             this.BtnModify.Text = "Modify";
             this.BtnModify.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.BtnModify.UseVisualStyleBackColor = true;
+            this.BtnModify.UseVisualStyleBackColor = false;
             this.BtnModify.Click += new System.EventHandler(this.BtnModify_Click);
             // 
             // BtnEliminate
             // 
+            this.BtnEliminate.BackColor = System.Drawing.SystemColors.ControlText;
             this.BtnEliminate.Font = new System.Drawing.Font("Montserrat", 9F, System.Drawing.FontStyle.Bold);
+            this.BtnEliminate.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.BtnEliminate.Image = ((System.Drawing.Image)(resources.GetObject("BtnEliminate.Image")));
             this.BtnEliminate.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnEliminate.Location = new System.Drawing.Point(264, 84);
@@ -199,12 +213,14 @@
             this.BtnEliminate.TabIndex = 14;
             this.BtnEliminate.Text = "Eliminate";
             this.BtnEliminate.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.BtnEliminate.UseVisualStyleBackColor = true;
+            this.BtnEliminate.UseVisualStyleBackColor = false;
             this.BtnEliminate.Click += new System.EventHandler(this.BtnEliminate_Click);
             // 
             // BtnClean
             // 
+            this.BtnClean.BackColor = System.Drawing.SystemColors.ControlText;
             this.BtnClean.Font = new System.Drawing.Font("Montserrat", 9F, System.Drawing.FontStyle.Bold);
+            this.BtnClean.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.BtnClean.Image = ((System.Drawing.Image)(resources.GetObject("BtnClean.Image")));
             this.BtnClean.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnClean.Location = new System.Drawing.Point(398, 84);
@@ -213,14 +229,14 @@
             this.BtnClean.TabIndex = 15;
             this.BtnClean.Text = "Clean";
             this.BtnClean.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.BtnClean.UseVisualStyleBackColor = true;
+            this.BtnClean.UseVisualStyleBackColor = false;
             this.BtnClean.Click += new System.EventHandler(this.BtnClean_Click);
             // 
             // DeliveryView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
+            this.BackColor = System.Drawing.SystemColors.ControlText;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.BtnClean);
             this.Controls.Add(this.BtnEliminate);

@@ -7,7 +7,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using CRUDSTORE.Control;
 using System.Data.SqlClient;
 using System.IO;
 
@@ -15,7 +14,6 @@ namespace CRUDSTORE.View
 {
     public partial class ClientView : Form
     {
-        private ProductControl ProductC = new ProductControl();
         byte[] ImageByte;
         private string StringConnection = "server= LAPTOP-3989L6UR; database= StoreMini; integrated security = true";
         SqlConnection ConnectionDB;
@@ -25,9 +23,27 @@ namespace CRUDSTORE.View
             InitializeComponent();
             SetData("Select Top(1) * From Products");
         }
+
+        private void BtnHome_Click(object sender, EventArgs e)
+        {
+            Form1 Home = new Form1();
+            Home.Show();
+            this.Hide();
+        }
+
+        private void CleanText()
+        {
+            LblName.Text = "";
+            LblPrice
+        }
+
+        private void BtnSearch_Click(object sender, EventArgs e)
+        {
+            SetData("Select Top(1) * From Products Where ProductName = '%" + TxtSearch.Text + "%'");
+        }
+
         private void SetData(string Query)
         {
-            //SqlDataReader Reader =  ProductC.ShowProductsToClient(Query);
             try
             {
                 SqlDataReader Reader;
@@ -52,12 +68,13 @@ namespace CRUDSTORE.View
             {
                 MessageBox.Show("It was ocurred an error" + ex.Message);
             }
-                ConnectionDB.Close();
+            ConnectionDB.Close();
         }
 
         public SqlConnection SetConnection()
         {
             return ConnectionDB = new SqlConnection(StringConnection);
         }
+
     }
 }

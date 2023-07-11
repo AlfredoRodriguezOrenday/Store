@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Data.SqlClient;
 using System.Data;
 using System.Windows.Forms;
+using CRUDSTORE.Model;
 
 namespace CRUDSTORE.Control
 {
@@ -63,17 +64,5 @@ namespace CRUDSTORE.Control
                 ConnectionDB.Close();
             }
         }
-
-        public SqlDataReader ExecuyteQueryWithReturnDataReader(string Query)
-        {
-            SqlDataReader Reader;
-            SqlCommand ExecuteQuery = new SqlCommand(Query);
-            ExecuteQuery.Connection = SetConnection();
-            ConnectionDB.Open();
-            Reader = ExecuteQuery.ExecuteReader();
-            ConnectionDB.Close();
-            return Reader;
-        }
-
     }
 }

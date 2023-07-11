@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ClientView));
             this.TxtSearch = new System.Windows.Forms.TextBox();
             this.BtnSearch = new System.Windows.Forms.Button();
             this.PicFoto = new System.Windows.Forms.PictureBox();
@@ -41,6 +42,7 @@
             this.LblAbadible = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.LblDescription = new System.Windows.Forms.Label();
+            this.BtnHome = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.PicFoto)).BeginInit();
             this.SuspendLayout();
             // 
@@ -61,6 +63,7 @@
             this.BtnSearch.TabIndex = 1;
             this.BtnSearch.Text = "Search";
             this.BtnSearch.UseVisualStyleBackColor = true;
+            this.BtnSearch.Click += new System.EventHandler(this.BtnSearch_Click);
             // 
             // PicFoto
             // 
@@ -170,11 +173,27 @@
             this.LblDescription.TabIndex = 12;
             this.LblDescription.Text = "...";
             // 
+            // BtnHome
+            // 
+            this.BtnHome.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.BtnHome.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold);
+            this.BtnHome.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.BtnHome.Image = ((System.Drawing.Image)(resources.GetObject("BtnHome.Image")));
+            this.BtnHome.Location = new System.Drawing.Point(358, 3);
+            this.BtnHome.Name = "BtnHome";
+            this.BtnHome.Size = new System.Drawing.Size(75, 65);
+            this.BtnHome.TabIndex = 13;
+            this.BtnHome.Text = "Home";
+            this.BtnHome.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.BtnHome.UseVisualStyleBackColor = false;
+            this.BtnHome.Click += new System.EventHandler(this.BtnHome_Click);
+            // 
             // ClientView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(440, 450);
+            this.Controls.Add(this.BtnHome);
             this.Controls.Add(this.LblDescription);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.LblAbadible);
@@ -211,5 +230,6 @@
         private System.Windows.Forms.Label LblAbadible;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label LblDescription;
+        private System.Windows.Forms.Button BtnHome;
     }
 }

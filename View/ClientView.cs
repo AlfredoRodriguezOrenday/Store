@@ -17,6 +17,9 @@ namespace CRUDSTORE.View
     {
         private ProductControl ProductC = new ProductControl();
         byte[] ImageByte;
+        private string StringConnection = "server= LAPTOP-3989L6UR; database= StoreMini; integrated security = true";
+        SqlConnection ConnectionDB;
+
         public ClientView()
         {
             InitializeComponent();
@@ -24,9 +27,14 @@ namespace CRUDSTORE.View
         }
         private void SetData(string Query)
         {
-            SqlDataReader Reader =  ProductC.ShowProductsToClient(Query);
+            //SqlDataReader Reader =  ProductC.ShowProductsToClient(Query);
             try
             {
+                SqlDataReader Reader;
+                SqlCommand ExecuteQuery = new SqlCommand(Query);
+                ExecuteQuery.Connection = SetConnection();
+                ConnectionDB.Open();
+                Reader = ExecuteQuery.ExecuteReader();
                 if (Reader.Read())
                 {
                     LblName.Text = Reader["ProductName"].ToString();
@@ -44,6 +52,12 @@ namespace CRUDSTORE.View
             {
                 MessageBox.Show("It was ocurred an error" + ex.Message);
             }
+                ConnectionDB.Close();
+        }
+
+        public SqlConnection SetConnection()
+        {
+            return ConnectionDB = new SqlConnection(StringConnection);
         }
     }
 }

@@ -11,3 +11,4 @@ C:\Users\alfredo\Documents\Curso de C#\CRUDSTORE\obj\Debug\CRUDSTORE.exe
 C:\Users\alfredo\Documents\Curso de C#\CRUDSTORE\obj\Debug\CRUDSTORE.pdb
 C:\Users\alfredo\Documents\Curso de C#\CRUDSTORE\obj\Debug\CRUDSTORE.View.DeliveryView.resources
 C:\Users\alfredo\Documents\Curso de C#\CRUDSTORE\obj\Debug\CRUDSTORE.View.ProductsView.resources
+C:\Users\alfredo\Documents\Curso de C#\CRUDSTORE\obj\Debug\CRUDSTORE.View.ClientView.resources

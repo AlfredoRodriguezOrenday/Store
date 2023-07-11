@@ -25,17 +25,24 @@ namespace CRUDSTORE.View
         private void SetData(string Query)
         {
             SqlDataReader Reader =  ProductC.ShowProductsToClient(Query);
-            if (Reader.Read())
+            try
             {
-                LblName.Text = Reader["ProductName"].ToString();
-                LblDescription.Text = Reader["Description"].ToString();
-                LblSize.Text = Reader["Cant"].ToString();
-                LblPrice.Text = Reader["Price"].ToString();
-                LblAbadible.Text = Reader["Abadible"].ToString();
-                ImageByte = (byte[])Reader["Photo"];
-                MemoryStream MS = new MemoryStream(ImageByte);
-                PicFoto.Image = Image.FromStream(MS);
-                PicFoto.SizeMode = PictureBoxSizeMode.StretchImage;
+                if (Reader.Read())
+                {
+                    LblName.Text = Reader["ProductName"].ToString();
+                    LblDescription.Text = Reader["Desription"].ToString();
+                    LblSize.Text = Reader["Cant"].ToString();
+                    LblPrice.Text = Reader["Price"].ToString();
+                    LblAbadible.Text = Reader["Abadible"].ToString();
+                    ImageByte = (byte[])Reader["Photo"];
+                    MemoryStream MS = new MemoryStream(ImageByte);
+                    PicFoto.Image = Image.FromStream(MS);
+                    PicFoto.SizeMode = PictureBoxSizeMode.StretchImage;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("It was ocurred an error" + ex.Message);
             }
         }
     }

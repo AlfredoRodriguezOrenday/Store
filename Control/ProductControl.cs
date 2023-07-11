@@ -56,5 +56,10 @@ namespace CRUDSTORE.Control
             Query = new SqlCommand(QueryCommand);
             return ConnectionDB.ExecuteQueryWithReturnData(Query);
         }
+
+        public SqlDataReader ShowProductsToClient(string Query)
+        {
+            return ConnectionDB.ExecuyteQueryWithReturnDataReader(Query);
+        }
     }
 }

@@ -46,10 +46,10 @@
             // 
             // TxtSearch
             // 
-            this.TxtSearch.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold);
+            this.TxtSearch.Font = new System.Drawing.Font("Montserrat", 10F, System.Drawing.FontStyle.Bold);
             this.TxtSearch.Location = new System.Drawing.Point(29, 26);
             this.TxtSearch.Name = "TxtSearch";
-            this.TxtSearch.Size = new System.Drawing.Size(170, 27);
+            this.TxtSearch.Size = new System.Drawing.Size(170, 24);
             this.TxtSearch.TabIndex = 0;
             // 
             // BtnSearch

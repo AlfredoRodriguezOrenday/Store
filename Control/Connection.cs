@@ -64,5 +64,16 @@ namespace CRUDSTORE.Control
             }
         }
 
+        public SqlDataReader ExecuyteQueryWithReturnDataReader(string Query)
+        {
+            SqlDataReader Reader;
+            SqlCommand ExecuteQuery = new SqlCommand(Query);
+            ExecuteQuery.Connection = SetConnection();
+            ConnectionDB.Open();
+            Reader = ExecuteQuery.ExecuteReader();
+            ConnectionDB.Close();
+            return Reader;
+        }
+
     }
 }

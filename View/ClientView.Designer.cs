@@ -48,7 +48,9 @@
             // 
             // TxtSearch
             // 
+            this.TxtSearch.BackColor = System.Drawing.SystemColors.WindowFrame;
             this.TxtSearch.Font = new System.Drawing.Font("Montserrat", 10F, System.Drawing.FontStyle.Bold);
+            this.TxtSearch.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.TxtSearch.Location = new System.Drawing.Point(29, 26);
             this.TxtSearch.Name = "TxtSearch";
             this.TxtSearch.Size = new System.Drawing.Size(170, 24);
@@ -57,13 +59,18 @@
             // 
             // BtnSearch
             // 
+            this.BtnSearch.BackColor = System.Drawing.SystemColors.ControlText;
             this.BtnSearch.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold);
+            this.BtnSearch.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.BtnSearch.Image = ((System.Drawing.Image)(resources.GetObject("BtnSearch.Image")));
+            this.BtnSearch.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BtnSearch.Location = new System.Drawing.Point(236, 26);
             this.BtnSearch.Name = "BtnSearch";
-            this.BtnSearch.Size = new System.Drawing.Size(116, 27);
+            this.BtnSearch.Size = new System.Drawing.Size(102, 33);
             this.BtnSearch.TabIndex = 1;
             this.BtnSearch.Text = "Search";
-            this.BtnSearch.UseVisualStyleBackColor = true;
+            this.BtnSearch.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.BtnSearch.UseVisualStyleBackColor = false;
             this.BtnSearch.Click += new System.EventHandler(this.BtnSearch_Click);
             // 
             // PicFoto
@@ -78,6 +85,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold);
+            this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label1.Location = new System.Drawing.Point(29, 67);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(64, 22);
@@ -88,6 +96,7 @@
             // 
             this.LblName.AutoSize = true;
             this.LblName.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold);
+            this.LblName.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.LblName.Location = new System.Drawing.Point(29, 101);
             this.LblName.Name = "LblName";
             this.LblName.Size = new System.Drawing.Size(22, 22);
@@ -98,6 +107,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold);
+            this.label3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label3.Location = new System.Drawing.Point(29, 126);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(57, 22);
@@ -108,6 +118,7 @@
             // 
             this.LblPrice.AutoSize = true;
             this.LblPrice.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold);
+            this.LblPrice.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.LblPrice.Location = new System.Drawing.Point(29, 162);
             this.LblPrice.Name = "LblPrice";
             this.LblPrice.Size = new System.Drawing.Size(22, 22);
@@ -118,6 +129,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold);
+            this.label5.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label5.Location = new System.Drawing.Point(29, 196);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(48, 22);
@@ -128,6 +140,7 @@
             // 
             this.LblSize.AutoSize = true;
             this.LblSize.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold);
+            this.LblSize.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.LblSize.Location = new System.Drawing.Point(29, 230);
             this.LblSize.Name = "LblSize";
             this.LblSize.Size = new System.Drawing.Size(22, 22);
@@ -138,6 +151,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold);
+            this.label7.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label7.Location = new System.Drawing.Point(29, 266);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(89, 22);
@@ -148,6 +162,7 @@
             // 
             this.LblAbadible.AutoSize = true;
             this.LblAbadible.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold);
+            this.LblAbadible.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.LblAbadible.Location = new System.Drawing.Point(29, 301);
             this.LblAbadible.Name = "LblAbadible";
             this.LblAbadible.Size = new System.Drawing.Size(22, 22);
@@ -158,6 +173,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold);
+            this.label9.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label9.Location = new System.Drawing.Point(29, 332);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(111, 22);
@@ -168,6 +184,7 @@
             // 
             this.LblDescription.AutoSize = true;
             this.LblDescription.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold);
+            this.LblDescription.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.LblDescription.Location = new System.Drawing.Point(29, 370);
             this.LblDescription.Name = "LblDescription";
             this.LblDescription.Size = new System.Drawing.Size(22, 22);
@@ -193,6 +210,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ControlText;
             this.ClientSize = new System.Drawing.Size(440, 450);
             this.Controls.Add(this.BtnHome);
             this.Controls.Add(this.LblDescription);

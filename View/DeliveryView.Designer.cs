@@ -66,6 +66,7 @@
             // TxtID
             // 
             this.TxtID.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.TxtID.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.TxtID.Location = new System.Drawing.Point(31, 41);
             this.TxtID.Name = "TxtID";
             this.TxtID.ReadOnly = true;
@@ -97,6 +98,7 @@
             // TxtName
             // 
             this.TxtName.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.TxtName.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.TxtName.Location = new System.Drawing.Point(121, 41);
             this.TxtName.Name = "TxtName";
             this.TxtName.Size = new System.Drawing.Size(84, 20);
@@ -116,6 +118,7 @@
             // TxtCompany
             // 
             this.TxtCompany.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.TxtCompany.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.TxtCompany.Location = new System.Drawing.Point(230, 41);
             this.TxtCompany.Name = "TxtCompany";
             this.TxtCompany.Size = new System.Drawing.Size(98, 20);
@@ -135,6 +138,7 @@
             // TxtPhoneNumber
             // 
             this.TxtPhoneNumber.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.TxtPhoneNumber.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.TxtPhoneNumber.Location = new System.Drawing.Point(355, 41);
             this.TxtPhoneNumber.Name = "TxtPhoneNumber";
             this.TxtPhoneNumber.Size = new System.Drawing.Size(98, 20);
@@ -170,6 +174,7 @@
             // TxtDeliveryDays
             // 
             this.TxtDeliveryDays.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.TxtDeliveryDays.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.TxtDeliveryDays.Location = new System.Drawing.Point(499, 41);
             this.TxtDeliveryDays.Name = "TxtDeliveryDays";
             this.TxtDeliveryDays.Size = new System.Drawing.Size(98, 20);

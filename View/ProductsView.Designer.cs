@@ -230,10 +230,10 @@
             // TxtID
             // 
             this.TxtID.BackColor = System.Drawing.SystemColors.WindowFrame;
-            this.TxtID.Enabled = false;
             this.TxtID.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.TxtID.Location = new System.Drawing.Point(18, 48);
             this.TxtID.Name = "TxtID";
+            this.TxtID.ReadOnly = true;
             this.TxtID.Size = new System.Drawing.Size(65, 20);
             this.TxtID.TabIndex = 16;
             // 
@@ -316,9 +316,11 @@
             // DGVProducts
             // 
             this.DGVProducts.AllowUserToAddRows = false;
+            this.DGVProducts.AllowUserToDeleteRows = false;
             this.DGVProducts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DGVProducts.Location = new System.Drawing.Point(2, 201);
             this.DGVProducts.Name = "DGVProducts";
+            this.DGVProducts.ReadOnly = true;
             this.DGVProducts.Size = new System.Drawing.Size(894, 248);
             this.DGVProducts.TabIndex = 39;
             this.DGVProducts.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.SelectProduct);

@@ -66,9 +66,9 @@
             // TxtID
             // 
             this.TxtID.BackColor = System.Drawing.SystemColors.WindowFrame;
-            this.TxtID.Enabled = false;
             this.TxtID.Location = new System.Drawing.Point(31, 41);
             this.TxtID.Name = "TxtID";
+            this.TxtID.ReadOnly = true;
             this.TxtID.Size = new System.Drawing.Size(65, 20);
             this.TxtID.TabIndex = 1;
             // 
@@ -177,9 +177,12 @@
             // 
             // DGVDelivery
             // 
+            this.DGVDelivery.AllowUserToAddRows = false;
+            this.DGVDelivery.AllowUserToDeleteRows = false;
             this.DGVDelivery.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DGVDelivery.Location = new System.Drawing.Point(-1, 159);
             this.DGVDelivery.Name = "DGVDelivery";
+            this.DGVDelivery.ReadOnly = true;
             this.DGVDelivery.Size = new System.Drawing.Size(803, 291);
             this.DGVDelivery.TabIndex = 12;
             this.DGVDelivery.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.SelectDelivery);

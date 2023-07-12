@@ -34,19 +34,25 @@ namespace CRUDSTORE.View
         private void CleanText()
         {
             LblName.Text = "";
-            LblPrice
+            LblPrice.Text = "";
+            LblSize.Text = "";
+            LblDescription.Text = "";
+            LblAbadible.Text = "";
+            PicFoto.Image = null;
+            ImageByte.Initialize();
         }
 
         private void BtnSearch_Click(object sender, EventArgs e)
         {
-            SetData("Select Top(1) * From Products Where ProductName = '%" + TxtSearch.Text + "%'");
+            CleanText();
+            SetData("Select Top(1) * From Products Where ProductName Like '%" + TxtSearch.Text + "%'");
         }
 
         private void SetData(string Query)
         {
+            SqlDataReader Reader;
             try
             {
-                SqlDataReader Reader;
                 SqlCommand ExecuteQuery = new SqlCommand(Query);
                 ExecuteQuery.Connection = SetConnection();
                 ConnectionDB.Open();
@@ -62,6 +68,7 @@ namespace CRUDSTORE.View
                     MemoryStream MS = new MemoryStream(ImageByte);
                     PicFoto.Image = Image.FromStream(MS);
                     PicFoto.SizeMode = PictureBoxSizeMode.StretchImage;
+                    Reader.Close();
                 }
             }
             catch (Exception ex)
@@ -76,5 +83,13 @@ namespace CRUDSTORE.View
             return ConnectionDB = new SqlConnection(StringConnection);
         }
 
+        private void Search(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == Convert.ToChar(Keys.Enter))
+            {
+                CleanText();
+                SetData("Select Top(1) * From Products Where ProductName Like '%" + TxtSearch.Text + "%'");
+            }
+        }
     }
 }

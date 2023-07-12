@@ -70,6 +70,10 @@ namespace CRUDSTORE.View
                     PicFoto.SizeMode = PictureBoxSizeMode.StretchImage;
                     Reader.Close();
                 }
+                else
+                {
+                    MessageBox.Show("This product don't exist");
+                }
             }
             catch (Exception ex)
             {

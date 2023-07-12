@@ -108,7 +108,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold);
             this.label3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label3.Location = new System.Drawing.Point(29, 126);
+            this.label3.Location = new System.Drawing.Point(29, 134);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(57, 22);
             this.label3.TabIndex = 5;
@@ -119,7 +119,7 @@
             this.LblPrice.AutoSize = true;
             this.LblPrice.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold);
             this.LblPrice.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.LblPrice.Location = new System.Drawing.Point(29, 162);
+            this.LblPrice.Location = new System.Drawing.Point(29, 170);
             this.LblPrice.Name = "LblPrice";
             this.LblPrice.Size = new System.Drawing.Size(22, 22);
             this.LblPrice.TabIndex = 6;
@@ -130,7 +130,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold);
             this.label5.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label5.Location = new System.Drawing.Point(29, 196);
+            this.label5.Location = new System.Drawing.Point(29, 204);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(48, 22);
             this.label5.TabIndex = 7;
@@ -141,7 +141,7 @@
             this.LblSize.AutoSize = true;
             this.LblSize.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold);
             this.LblSize.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.LblSize.Location = new System.Drawing.Point(29, 230);
+            this.LblSize.Location = new System.Drawing.Point(29, 238);
             this.LblSize.Name = "LblSize";
             this.LblSize.Size = new System.Drawing.Size(22, 22);
             this.LblSize.TabIndex = 8;
@@ -152,7 +152,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold);
             this.label7.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label7.Location = new System.Drawing.Point(29, 266);
+            this.label7.Location = new System.Drawing.Point(29, 274);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(89, 22);
             this.label7.TabIndex = 9;
@@ -163,7 +163,7 @@
             this.LblAbadible.AutoSize = true;
             this.LblAbadible.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold);
             this.LblAbadible.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.LblAbadible.Location = new System.Drawing.Point(29, 301);
+            this.LblAbadible.Location = new System.Drawing.Point(29, 309);
             this.LblAbadible.Name = "LblAbadible";
             this.LblAbadible.Size = new System.Drawing.Size(22, 22);
             this.LblAbadible.TabIndex = 10;
@@ -174,7 +174,7 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold);
             this.label9.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label9.Location = new System.Drawing.Point(29, 332);
+            this.label9.Location = new System.Drawing.Point(29, 340);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(111, 22);
             this.label9.TabIndex = 11;
@@ -185,7 +185,7 @@
             this.LblDescription.AutoSize = true;
             this.LblDescription.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold);
             this.LblDescription.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.LblDescription.Location = new System.Drawing.Point(29, 370);
+            this.LblDescription.Location = new System.Drawing.Point(29, 378);
             this.LblDescription.Name = "LblDescription";
             this.LblDescription.Size = new System.Drawing.Size(22, 22);
             this.LblDescription.TabIndex = 12;

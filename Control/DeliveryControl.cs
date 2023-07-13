@@ -18,6 +18,10 @@ namespace CRUDSTORE.Control
         {
             ConnectionDB = new Connection();
         }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="DeliveryProducts"></param>
         public void AddDeliveryProduct(DeliveryProduct DeliveryProducts)
         {
             Query = new SqlCommand("Exec SP_SaveDeliveryProducts @DeliveryName, @Company, @PhoneNumber, @DeliveryDays");

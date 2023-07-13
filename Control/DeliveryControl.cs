@@ -10,7 +10,7 @@ using System.Data;
 namespace CRUDSTORE.Control
 {
     /// <summary>
-    /// This class is used to do different actions like Create, Read, Update and Delete. 
+    /// This class is used to do different actions like Create, Read, Update and Delete Deliverys. 
     /// </summary>
     internal class DeliveryControl
     {

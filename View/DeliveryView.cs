@@ -12,9 +12,14 @@ using CRUDSTORE.Control;
 
 namespace CRUDSTORE.View
 {
+    /// <summary>
+    /// This class is used to see the delivery view.
+    /// </summary>
     public partial class DeliveryView : Form
     {
+        /// <value>The property Id is used to save the Delivery Id. </value>
         int Id = 0;
+        /// <value>The property DeliveryC is used to access the methods from DeliveryControl. </value>
         DeliveryControl DeliveryC = new DeliveryControl();
 
         public DeliveryView()
@@ -23,21 +28,33 @@ namespace CRUDSTORE.View
             RefreshGrid();
         }
 
-
+        /// <summary>
+        /// This method redirect to the main view.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void BtnHome_Click(object sender, EventArgs e)
         {
             Form1 Home = new Form1();
             Home.Show();
             this.Hide();
         }
-
+        /// <summary>
+        /// This method is used when the user click in the button and add a register in the database.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void BtnAdding_Click(object sender, EventArgs e)
         {
             DeliveryC.AddDeliveryProduct(GetData(false));
             CleanTxt();
             RefreshGrid();
         }
-
+        /// <summary>
+        /// This method is used when the user click in the button and modify a register in the database.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void BtnModify_Click(object sender, EventArgs e)
         {
             if(TxtID.Text != null)
@@ -47,7 +64,11 @@ namespace CRUDSTORE.View
                 RefreshGrid();
             }
         }
-
+        /// <summary>
+        /// This method is used when the user click in the button and delete a register in the database.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void BtnEliminate_Click(object sender, EventArgs e)
         {
             if(TxtID.Text != null)
@@ -57,12 +78,18 @@ namespace CRUDSTORE.View
                 RefreshGrid();
             }
         }
-
+        /// <summary>
+        /// This method is used when the user click in the button and call the function CleanTxt.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void BtnClean_Click(object sender, EventArgs e)
         {
             CleanTxt();
         }
-
+        /// <summary>
+        /// This method clean the TextBoxs and parameters.
+        /// </summary>
         private void CleanTxt()
         {
             TxtID.Text = "";
@@ -72,7 +99,11 @@ namespace CRUDSTORE.View
             TxtDeliveryDays.Text = "";
             Id = 0;
         }
-
+        /// <summary>
+        /// This method get the data from the TextBoxs, return an object kind DeliveryProduct and check if all parameters are ready and do the operation.
+        /// </summary>
+        /// <param name="Action">It's a boolean parameter if the action is add the parameter will be false.</param>
+        /// <returns></returns>
         private DeliveryProduct GetData(bool Action)
         {
             DeliveryProduct DeliveryModel = new DeliveryProduct();
@@ -103,7 +134,9 @@ namespace CRUDSTORE.View
                     DeliveryModel.ID = Id;
                     return DeliveryModel;
         }
-
+        /// <summary>
+        /// This method refresh the DataGridView register from database.
+        /// </summary>
         private void RefreshGrid()
         {
             try
@@ -119,7 +152,11 @@ namespace CRUDSTORE.View
                 MessageBox.Show("It was ocurred an error " + e.Message);
             }
         }
-
+        /// <summary>
+        /// This method filled the data to the TextBoxs.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void SelectDelivery(object sender, DataGridViewCellMouseEventArgs e)
         {
             int Indice =  e.RowIndex;

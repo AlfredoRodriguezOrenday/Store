@@ -68,7 +68,7 @@ namespace CRUDSTORE.Control
         /// <summary>
         /// This method show products from the database.
         /// </summary>
-        /// <param name="QueryCommand">It's a string that will be have a Query to return anything.</param>
+        /// <param name="QueryCommand">It's a string that will be have a Query to return a anything.</param>
         public DataSet ShowProducts(string QueryCommand)
         {
             Query = new SqlCommand(QueryCommand);

@@ -13,10 +13,16 @@ using CRUDSTORE.Model;
 
 namespace CRUDSTORE.View
 {
+    /// <summary>
+    /// This class is used to see the products view.
+    /// </summary>
     public partial class ProductsView : Form
     {
+        /// <value>The property ProductC is used to access his methods from ProductControl. </value>
         ProductControl ProductC = new ProductControl();
+        /// <value>The property ImageByte is used to save an array kind byte. </value>
         byte[] ImageByte;
+        /// <value>The property Id is used to save the Product Id. </value>
         int Id;
         public ProductsView()
         {
@@ -24,14 +30,20 @@ namespace CRUDSTORE.View
             RefreshGrid();
             RefreshDelivery();
         }
-
+        /// <summary>
+        /// This method redirect to the main view.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void BtnHome_Click(object sender, EventArgs e)
         {
             Form1 Home = new Form1();
             Home.Show();
             this.Hide();
         }
-
+        /// <summary>
+        /// This method clean the TextBoxs and parameters.
+        /// </summary>
         private void CleanText()
         {
             TxtID.Text = "";
@@ -45,12 +57,20 @@ namespace CRUDSTORE.View
             CBDelivery.SelectedIndex = 0;
             Id = 0;
         }
-
+        /// <summary>
+        /// This method is used when the user click in the button and call the function CleanText.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void BtnLimpiar_Click(object sender, EventArgs e)
         {
             CleanText();
         }
-
+        /// <summary>
+        /// This method is called when the user click in the button and search a picture in the files of the computer.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void BtnExaminar_Click(object sender, EventArgs e)
         {
             OpenFileDialog SelectorImage = new OpenFileDialog();
@@ -64,7 +84,11 @@ namespace CRUDSTORE.View
                 ImageByte = memoria.ToArray();
             }
         }
-
+        /// <summary>
+        /// This method get the data from the TextBoxs, return an object kind Product and check if all parameters are ready and do the operation.
+        /// </summary>
+        /// <param name="Action">It's a boolean parameter if the action is add the parameter will be false.</param>
+        /// <returns></returns>
         private Product GetInfo(bool Action)
         {
             Product DeliveryModel = new Product();
@@ -105,15 +129,20 @@ namespace CRUDSTORE.View
             DeliveryModel.ID = Id;
             return DeliveryModel;
         }
-
+        /// <summary>
+        /// This method is used when the user click in the button and add a register in the database.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void BtnAgregar_Click(object sender, EventArgs e)
         {
             ProductC.SaveProduct(GetInfo(false));
             RefreshGrid();
             CleanText();
-
         }
-
+        /// <summary>
+        /// This method refresh the DataGridView register from database.
+        /// </summary>
         private void RefreshGrid()
         {
             try
@@ -138,28 +167,42 @@ namespace CRUDSTORE.View
                 MessageBox.Show("It was ocurred an error " + e.Message);
             }
         }
-
+        /// <summary>
+        /// This method refresh the ComboBox register from database.
+        /// </summary>
         private void RefreshDelivery()
         {
             CBDelivery.DataSource = ProductC.ShowProducts("Select Id, DeliveryName From DeliveryProducts").Tables[0];
             CBDelivery.DisplayMember = "DeliveryName";
             CBDelivery.ValueMember = "Id";
         }
-
+        /// <summary>
+        /// This method is used when the user click in the button and update a register in the database.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void BtnEditar_Click(object sender, EventArgs e)
         {
             ProductC.UpdateProduct(GetInfo(true));
             RefreshGrid();
             CleanText();
         }
-
+        /// <summary>
+        /// This method is used when the user click in the button and delete a register in the database.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void BtnEliminar_Click(object sender, EventArgs e)
         {
             ProductC.DeleteProduct(GetInfo(true));
             RefreshGrid();
             CleanText();
         }
-
+        /// <summary>
+        /// This method filled the data to the TextBoxs, PictureBox and ComboBox.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void SelectProduct(object sender, DataGridViewCellMouseEventArgs e)
         {
             int Indice = e.RowIndex;

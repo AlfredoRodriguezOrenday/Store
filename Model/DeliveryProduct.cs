@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace CRUDSTORE.Model
 {
     /// <summary>
-    /// This Class is used like a Model and his properties are used to save information.
+    /// This Class is used like a Model and his properties are used to save DeliveryProduct information.
     /// </summary>
     internal class DeliveryProduct
     {

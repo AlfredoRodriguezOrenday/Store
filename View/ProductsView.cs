@@ -53,7 +53,7 @@ namespace CRUDSTORE.View
             TxtPrice.Text = "";
             TxtAvailable.Text = "";
             PicFoto.Image = null;
-            ImageByte.Initialize(); // Maybe in the future I will change this line
+            ImageByte.Initialize(); 
             CBDelivery.SelectedIndex = 0;
             Id = 0;
         }

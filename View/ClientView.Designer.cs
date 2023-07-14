@@ -210,6 +210,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
             this.BackColor = System.Drawing.SystemColors.ControlText;
             this.ClientSize = new System.Drawing.Size(440, 450);
             this.Controls.Add(this.BtnHome);
@@ -226,6 +227,7 @@
             this.Controls.Add(this.PicFoto);
             this.Controls.Add(this.BtnSearch);
             this.Controls.Add(this.TxtSearch);
+            this.MaximumSize = new System.Drawing.Size(456, 489);
             this.Name = "ClientView";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ClientView";

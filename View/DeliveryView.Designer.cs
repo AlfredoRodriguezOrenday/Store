@@ -54,7 +54,7 @@
             this.BtnHome.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold);
             this.BtnHome.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.BtnHome.Image = ((System.Drawing.Image)(resources.GetObject("BtnHome.Image")));
-            this.BtnHome.Location = new System.Drawing.Point(713, 12);
+            this.BtnHome.Location = new System.Drawing.Point(631, 12);
             this.BtnHome.Name = "BtnHome";
             this.BtnHome.Size = new System.Drawing.Size(75, 65);
             this.BtnHome.TabIndex = 0;
@@ -185,10 +185,10 @@
             this.DGVDelivery.AllowUserToAddRows = false;
             this.DGVDelivery.AllowUserToDeleteRows = false;
             this.DGVDelivery.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DGVDelivery.Location = new System.Drawing.Point(-1, 159);
+            this.DGVDelivery.Location = new System.Drawing.Point(2, 135);
             this.DGVDelivery.Name = "DGVDelivery";
             this.DGVDelivery.ReadOnly = true;
-            this.DGVDelivery.Size = new System.Drawing.Size(803, 291);
+            this.DGVDelivery.Size = new System.Drawing.Size(709, 314);
             this.DGVDelivery.TabIndex = 12;
             this.DGVDelivery.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.SelectDelivery);
             // 
@@ -245,7 +245,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlText;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(713, 450);
             this.Controls.Add(this.BtnClean);
             this.Controls.Add(this.BtnEliminate);
             this.Controls.Add(this.BtnModify);
@@ -262,7 +262,9 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.TxtID);
             this.Controls.Add(this.BtnHome);
+            this.MaximizeBox = false;
             this.Name = "DeliveryView";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "DeliveryView";
             ((System.ComponentModel.ISupportInitialize)(this.DGVDelivery)).EndInit();
             this.ResumeLayout(false);

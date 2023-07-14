@@ -227,6 +227,7 @@
             this.Controls.Add(this.BtnSearch);
             this.Controls.Add(this.TxtSearch);
             this.Name = "ClientView";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ClientView";
             ((System.ComponentModel.ISupportInitialize)(this.PicFoto)).EndInit();
             this.ResumeLayout(false);

@@ -356,6 +356,7 @@
             this.Controls.Add(this.BtnHome);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.Name = "ProductsView";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ProductsView";
             ((System.ComponentModel.ISupportInitialize)(this.PicFoto)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DGVProducts)).EndInit();

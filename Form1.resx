@@ -121,7 +121,7 @@
   <data name="BtnProviders.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        EQAACxEBf2RfkQAACbBJREFUaEPtmntQVNcdx++9uwsLCPKQhyCyyEMiICBvQXm/EWXlIWLViEiMwVfU
+        EAAACxABrSO9dQAACbBJREFUaEPtmntQVNcdx++9uwsLCPKQhyCyyEMiICBvQXm/EWXlIWLViEiMwVfU
         oHmoQ8comOhkGgdNWktsMm3Sxk4ymXaaqpmk02k1Tdppp9POpG2SNp126jSdaZu2Gdhfv79zuZfd5e5D
         FOsf/c185rDnnvM7v985v/O6F+n/4l0SwHbwiBf6QDy456RBkpV/ICWfyMrfkdaBe0YsMOovUrRtUrr/
         HEn7LnuGn3M5WfmzqHePSA4gac0jxkaD4J1fpti6zSIV5dTR4HqGUtO89i1nuu7fsXfq0ZxIJSCpc9jQ
@@ -168,7 +168,7 @@
   <data name="BtnProducts.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        EQAACxEBf2RfkQAABRpJREFUaEPFmttv22QYxnsB3ANDHARXiMM/gxDVDh2rNkZZt2ljB7hAIA3tgosB
+        EAAACxABrSO9dQAABRpJREFUaEPFmttv22QYxnsB3ANDHARXiMM/gxDVDh2rNkZZt2ljB7hAIA3tgosB
         XbcVIUDjDoYEF0xIQ3QDepBY27B1ayEtTQ9JCyWJc44zMsGgL8/rfG5t53VmO07zSr9a9Xd4n8f+bH/+
         nI4wIpPJPFooFF7M5/MD4DJYyOVyBfCPooB989gOYnsWdKXT6YdV8/aErutbIOgIxFwHFJAI+jhcLpcf
         VN22PpDwcSQ+B/6yCGmWW6A/m80+ptKEH0R0L8QfRaKKJXHY8EE5iVz3qbThBI7MsxA/7UjWSiZxXT2l
@@ -196,7 +196,7 @@
   <data name="BtnClients.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        EQAACxEBf2RfkQAACLxJREFUaEPdWWtwU8cVdpt3+pppfzTTzpRpLdmOqnsFulfGZBKbJNASW5INRgkM
+        EAAACxABrSO9dQAACLxJREFUaEPdWWtwU8cVdpt3+pppfzTTzpRpLdmOqnsFulfGZBKbJNASW5INRgkM
         LuURQgEbTInr2uFpUfIAEkwhRrEsS/ilCGyweYRHwXYClEwxIaSpQwKIZpK+aDtMOwm4Fj49Z7VSJd+r
         SBZ2nOmZ+ebee/bs3u/b3bO7V0oZDsvLMnzXIgulFkncYpENHousP2+VhctWSXwL/Z0WWTyDV/QLNVZZ
         9OF1h1kWny6QDJm8idGzAlPGt5DsCask2Mwm/QQkd8ZqNCxAn9UqG5rxes0iCW0oYhpeZ+KzE2P+hEBh

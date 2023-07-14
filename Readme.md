@@ -40,7 +40,7 @@ The fourth view is the view of the client where the client can search products a
 string Saludar = "Hola mundo, mi nombre es Alfredo y este es uno de mis proyectos";
 ~~~
 
-> En este proyecto hice un Videojuego de Ping Pong
+> En este proyecto hice un  CRUD con una vista de productos.
 ### Acerca del videojuego :information_source:
 
 Hice la Tienda con SqlServer and C#.
